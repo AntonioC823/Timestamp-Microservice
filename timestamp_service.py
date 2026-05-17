@@ -60,21 +60,39 @@ def main():
         user_id = data.get("user_id")
         timestamp_format = data.get("timestamp_format")
 
-        # Generate timestamp
-        timestamp = generate_timestamp(timestamp_format)
+        # validate fields
+        if not app_name:
+            response = {
+                "message": "Missing required field: app_name"
+            }
 
-        # Response
-        if timestamp is None:
+        elif not user_id:
             response = {
-                "message": "Unsupported timestamp format"
+                "message": "Missing required field: user_id"
             }
+
+        elif timestamp_format is None:
+            response = {
+                "message": "Missing required field: timestamp_format"
+            }
+
         else:
-            response = {
-                "app_name": app_name,
-                "user_id": user_id,
-                "timestamp_format": timestamp_format,
-                "timestamp": timestamp
-            }
+
+            # Generate timestamp
+            timestamp = generate_timestamp(timestamp_format)
+
+            # Response
+            if timestamp is None:
+                response = {
+                    "message": "Unsupported timestamp format"
+                }
+            else:
+                response = {
+                    "app_name": app_name,
+                    "user_id": user_id,
+                    "timestamp_format": timestamp_format,
+                    "timestamp": timestamp
+                }
 
         # Send response
         socket.send_string(json.dumps(response))
