@@ -30,3 +30,4 @@ print(data)
 ```
 
 D. UML sequence diagram
+![UML Sequence Diagram](Timestamp_UML_Sequence_Diagram.png)
