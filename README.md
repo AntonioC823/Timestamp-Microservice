@@ -3,9 +3,9 @@ The Timestamp Microservice generates formatted timestamps and returns them as JS
 
 B. To programmatically REQUEST data from the microservice: A program connects to it using ZeroMQ. It sends a message in JSON format that includes the required information: 
 
--app_name: Name of the application making the request
--user_id: Unique identifier for the user
--timestamp_format: Desired format of the generated timestamp
+- app_name: Name of the application making the request
+- user_id: Unique identifier for the user
+- timestamp_format: Desired format of the generated timestamp
 
 Supported timestamp formats:
 
@@ -84,10 +84,10 @@ Example Successful Response:
 }
 ```
 Response Fields:
--app_name: Name of the application that sent the request.
--user_id: User identifier provided in the request.
--timestamp_format: Timestamp format requested by the client.
--timestamp: The generated timestamp returned by the microservice.
+- app_name: Name of the application that sent the request.
+- user_id: User identifier provided in the request.
+- timestamp_format: Timestamp format requested by the client.
+- timestamp: The generated timestamp returned by the microservice.
 
 
 Example Error Response:
