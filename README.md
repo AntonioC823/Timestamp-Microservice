@@ -9,17 +9,17 @@ B. To programmatically REQUEST data from the microservice: A program connects to
 
 Supported timestamp formats:
 
-MM/DD/YYYY HH:MM:SS AM/PM
-MM-DD-YYYY HH:MM:SS AM/PM
-MM/DD/YYYY HH:MM:SS
-MM-DD-YYYY HH:MM:SS
-DD/MM/YYYY HH:MM:SS AM/PM
-DD-MM-YYYY HH:MM:SS AM/PM
-DD/MM/YYYY HH:MM:SS
-DD-MM-YYYY HH:MM:SS
+- MM/DD/YYYY HH:MM:SS AM/PM
+- MM-DD-YYYY HH:MM:SS AM/PM
+- MM/DD/YYYY HH:MM:SS
+- MM-DD-YYYY HH:MM:SS
+- DD/MM/YYYY HH:MM:SS AM/PM
+- DD-MM-YYYY HH:MM:SS AM/PM
+- DD/MM/YYYY HH:MM:SS
+- DD-MM-YYYY HH:MM:SS
 
 If timestamp_format is an empty string (""), the service defaults to:
-MM/DD/YYYY HH:MM:SS AM/PM
+- MM/DD/YYYY HH:MM:SS AM/PM
 
 The microservice uses this information to generate a timestamp or return an error message.
 
